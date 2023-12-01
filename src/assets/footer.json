@@ -1,0 +1,28 @@
+
+{
+    "companyName": "Your Company",
+    "address": "123 Main St, City",
+    "email": "info@example.com",
+    "phone": "+1 234 567 890",
+    "sections": [
+      {
+        "name": "Products",
+        "subsections": ["Features", "Testimonials"]
+      },
+      {
+        "name": "Section 2",
+        "subsections": ["Subsection 2.1", "Subsection 2.2"]
+      }
+      ,
+      {
+        "name": "Section 3",
+        "subsections": ["Subsection 2.1", "Subsection 2.2"]
+      }
+      ,
+      {
+        "name": "Section 4",
+        "subsections": ["Subsection 2.1", "Subsection 2.2"]
+      }
+    ]
+  }
+  
