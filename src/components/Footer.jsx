@@ -29,7 +29,11 @@ const Footer = () => {
             </div>
           ))}
         </div>
+        <div className='mt-9'>
+            Animation
+        </div>
       </div>
+      
     </footer>
   );
 };

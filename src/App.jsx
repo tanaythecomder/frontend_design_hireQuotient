@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 // import reactLogo from './assets/react.svg'
 import section1 from "/Section1_image.png"
 // import viteLogo from '/vite.svg'
@@ -8,6 +8,10 @@ import Button from './components/Button'
 import Layout from './components/Layout'
 
 function App() {
+  const [isOpen, setIsOpen]   = useState(true)
+  useEffect(()=>{
+    setIsOpen(false)
+  },[])
 
 
   return (
@@ -16,17 +20,18 @@ function App() {
       <Layout>
        
         <div className='home'>
-          <div className='flex flex-col justify-center items-center'>
+          {/* section1 */}
+          <div className={`flex flex-col justify-center items-center  `}>
             <Button content={"An other way to manage time️"} bgColor={true} />
 
-            <div className='text-7xl font-bold tracking-wide'>
+            <div className={`text-7xl font-bold tracking-wide ${isOpen?"scale-50":"scale-100 duration-1000 "}`}>
               Your new favorite
             </div>
-            <div className='text-7xl font-bold'>
+            <div className={`text-7xl font-bold ${isOpen?"scale-50":"scale-100 duration-1000 "}`}>
               calendar 🗓️ app
             </div>
 
-            <div className='text-[19px] mt-7 text-gray-500'>
+            <div className={`text-[19px] mt-7 text-gray-500 `}>
               Here you should explain how cool your app is. Remember,<br /> focus on the benefits for your users, not on the features.
             </div>
 
@@ -38,8 +43,8 @@ function App() {
             <img className="px-6" src={section1} alt="" />
           </div>
 
-
-          <div className='mt-[190px] flex flex-col justify-center items-center'>
+          {/* section2 */}
+          <div className= {`flex flex-col justify-center items-center ${isOpen?"scale-50  ":"scale-100 duration-1000"} `}>
             <Button content={"Our main features🦸"} bgColor={true} />
 
             <div className='text-7xl font-bold tracking-wide'>
@@ -60,6 +65,8 @@ function App() {
             </div>
             <img src={section1} alt="" />
           </div>
+
+          {/* section3 */}
           <div className='mt-[80px] flex flex-col justify-center items-center'>
             <Button content={"An other way to manage time️"} bgColor={true} />
 
@@ -81,6 +88,8 @@ function App() {
             </div>
             <img src={section1} alt="" />
           </div>
+          
+          {/* section4 */}
           <div className='mt-[80px] flex flex-col justify-center items-center'>
             <Button content={"An other way to manage time️"} bgColor={true} />
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from './Button';
 
 const Navbar = () => {
@@ -13,9 +13,13 @@ const Navbar = () => {
         console.log('Cut action triggered!');
         setIsCutting(!isCutting); // Toggle the state
     };
+    const [isOpen,setIsOpen] =useState(false)
+    useEffect(()=>{
+            setIsOpen(true);
+    },[])
 
     return (
-        <nav className="  w-full sticky top-0 z-10 border-b border-gray-200 bg-[#fef9f6]">
+        <nav className={`w-full sticky top-0 z-10 border-b border-gray-200 bg-[#fef9f6] ${isOpen?"translate-y-[0] duration-200 ease":"translate-y-[-100%] "} `}>
             <div className="max-w-screen-xl flex flex-wrap items-center md:justify-around justify-between mx-auto p-4">
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
